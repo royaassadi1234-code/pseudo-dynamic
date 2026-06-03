@@ -1,142 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pseudodynamic Website Directory</title>
-    <style>
-      body {
-        font-family: Georgia, 'Times New Roman', serif;
-        background-color: #f8f5f2;
-        color: #333;
-        max-width: 700px;
-        margin: auto;
-        padding: 3em 1.5em;
-        line-height: 1.6;
-        position: relative;
-      }
-
-      h1 {
-        font-size: 2em;
-        margin-bottom: 1em;
-        border-bottom: 2px solid #ccc;
-        padding-bottom: 0.3em;
-      }
-
-      p {
-        margin-bottom: 2em;
-      }
-
-      a {
-        text-decoration: none;
-        color: #0066cc;
-        font-weight: bold;
-        transition: color 0.3s ease;
-      }
-
-      a:hover {
-        color: #004499;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      li {
-        background: #fff;
-        padding: 1em;
-        margin-bottom: 1em;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-        transition: transform 0.2s ease;
-      }
-
-      li:hover {
-        transform: translateY(-2px);
-      }
-
-      .no-link {
-        color: #aaa;
-        text-decoration: line-through;
-        cursor: not-allowed;
-        font-style: italic;
-      }
-
-      /* New CSS for the home icon */
-      .home-link {
-        position: absolute;
-        top: 1em;
-        left: -100px; /* Move it outside the left margin */
-      }
-
-      .home-link img {
-        width: 88px;
-        height: auto;
-        border-radius: 4px;
-        cursor: pointer;
-        background-color: #fff;
-        box-shadow: 0 0 5px rgba(0,0,0,0.2);
-      }
-
-      .home-link img:hover {
-        box-shadow: 0 0 8px rgba(0,0,0,0.3);
-      }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sheet Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      max-width: 1200px;
+    }
+    
+    .card {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+    }
+    
+    .card img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .card-title {
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+    
+    .card-description {
+      margin: 0.5rem 0;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-  <!-- Home icon link -->
-  <a class="home-link" href="https://14143-dh-sustainability.github.io">
-    <img src="poster_small.png" alt="Home" />
-  </a>
-  
-  <h1>Pseudodynamic Website Directory</h1>
-
-  <p>
-    <a href="https://docs.google.com/spreadsheets/d/1VBVZlviaFWJ0L2JX4A2HyWmc30UwDqUTb3RlgLkORWA/edit?usp=sharing" target="_blank">
-        ➕ Add your website to the list
-    </a>
-  </p>
-
-  <ul id="link-list"></ul>
-
-  <script>
-    // const jsonUrl = "https://api.sheetbest.com/sheets/0cd08c73-9ea2-49d1-8f83-e8652144cce5";
-    // const jsonUrl = "https://opensheet.elk.sh/1VBVZlviaFWJ0L2JX4A2HyWmc30UwDqUTb3RlgLkORWA/1";
-    const jsonUrl = "./website_directories.json";
-
-    fetch(jsonUrl)
-      .then(response => {
-        if (!response.ok) throw new Error("Network response was not ok");
-        return response.json();
-      })
-      .then(data => {
-        const list = document.getElementById("link-list");
-
-        data.forEach(item => {
-          if (item.Directory !== 'pseudodynamic') return; // Skip all items from other homeworks
-          
-          const li = document.createElement("li");
-
-          if (item.Website) {
-            const link = document.createElement("a");
-            link.href = item.Website;
-            link.textContent = item.Name;
-            link.target = "_blank";
-            li.appendChild(link);
-          } else {
-            const span = document.createElement("span");
-            span.textContent = item.Name;
-            span.className = "no-link";
-            li.appendChild(span);
-          }
-
-          list.appendChild(li);
-        });
-      })
-      .catch(error => {
-        console.error("Error fetching JSON:", error);
-      });
-  </script>
+  <h1>Sheet Data</h1>
+  <div id="gallery"></div>
+  <script src="roya.js"></script>
 </body>
 </html>
