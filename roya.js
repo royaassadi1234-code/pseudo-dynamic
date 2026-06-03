@@ -1,6 +1,6 @@
 // Configuration
 const SHEET_ID = '12RfhLBWxO8mJAcnY1OvsRNktxzETsJvFHE2zXFDO8as';
-const SHEET_GID = '0';  // Try the first sheet tab
+const SHEET_GID = '1';  // Sheet numbers start at 1 (first sheet)
 const jsonUrl = `https://opensheet.elk.sh/${SHEET_ID}/${SHEET_GID}`;
 
 console.log('Fetching from:', jsonUrl);
