@@ -3,51 +3,55 @@ const SHEET_ID = '12RfhLBWxO8mJAcnY1OvsRNktxzETsJvFHE2zXFDO8as';
 const SHEET_GID = '956712292';
 const jsonUrl = `https://opensheet.elk.sh/${SHEET_ID}/${SHEET_GID}`;
 
+console.log('Fetching from:', jsonUrl);
+
 // Fetch data from Google Sheets using opensheet API
 fetch(jsonUrl)
   .then(response => {
+    console.log('Response status:', response.status);
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.status}`);
     }
     return response.json();
   })
   .then(data => {
+    console.log('Data received:', data);
+    console.log('Number of items:', data.length);
+    
     const gallery = document.getElementById('gallery');
     
-    data.forEach(item => {
+    if (!data || data.length === 0) {
+      gallery.innerHTML = '<p>No data found in sheet</p>';
+      return;
+    }
+    
+    data.forEach((item, index) => {
+      console.log(`Item ${index}:`, item);
+      
       const card = document.createElement('div');
       card.className = 'card';
       
-      const link = document.createElement('a');
-      link.href = item.Link || '#';
-      link.target = '_blank';
+      const ddPreview = document.createElement('div');
+      ddPreview.className = 'card-section';
+      ddPreview.innerHTML = `<strong>Dd Paragraph Preview:</strong><br>${item['Dd Paragraph Preview'] || 'N/A'}`;
       
-      const img = document.createElement('img');
-      img.src = item.Image || '';
-      img.alt = item.Title || '';
-      img.loading = 'lazy';
+      const pyPreview = document.createElement('div');
+      pyPreview.className = 'card-section';
+      pyPreview.innerHTML = `<strong>PY Paragraph Preview:</strong><br>${item['PY Paragraph Preview'] || 'N/A'}`;
       
-      const content = document.createElement('div');
-      content.className = 'card-content';
+      const sharedWords = document.createElement('div');
+      sharedWords.className = 'card-section';
+      sharedWords.innerHTML = `<strong>Shared Words:</strong><br>${item['Shared Words'] || 'N/A'}`;
       
-      const title = document.createElement('div');
-      title.className = 'card-title';
-      title.textContent = item.Title || '';
+      card.appendChild(ddPreview);
+      card.appendChild(pyPreview);
+      card.appendChild(sharedWords);
       
-      const description = document.createElement('div');
-      description.className = 'card-description';
-      description.textContent = item.Description || '';
-      
-      content.appendChild(title);
-      content.appendChild(description);
-      
-      link.appendChild(img);
-      link.appendChild(content);
-      
-      card.appendChild(link);
       gallery.appendChild(card);
     });
   })
   .catch(error => {
     console.error('Error fetching JSON:', error);
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = `<p style="color: red;">Error loading data: ${error.message}</p>`;
   });
