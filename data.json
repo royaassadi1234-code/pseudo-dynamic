@@ -1,0 +1,57 @@
+[
+  {
+    "PY Sentence Range": "s3315",
+    "Candidate Rank": "1",
+    "Match Tier": "medium",
+    "Match Score": "0.1718",
+    "IDF Cosine": "0.0624",
+    "Shared Distinct Words": "2",
+    "Shared Words": "ahlāyīh, amāh",
+    "Dd Paragraph Preview": "0.5a: amāh hamist kē yazdān bandag ud pad kōxšišn ī Druz ham-spāh pad āstawānīh ī abar weh-Dēn ī Mazdēsnān ham-estišn pad ēk ān ī ahlāyīh rāh ham-tuxšišn ō gāh ī andar ān ī pāšom axwān ham-ārzōg pad ayābišn ī ō ān pāšom axwān Fraškerd ham-ēmēd hēm ān-imān kām ī ham-wēnišnīh ud ham-p...",
+    "PY Paragraph Preview": "caby_ch67_st1: pad ahlāyīh ō amāh rasād pad frārōnīh ,"
+  },
+  {
+    "PY Sentence Range": "s3167",
+    "Candidate Rank": "2",
+    "Match Tier": "medium",
+    "Match Score": "0.1417",
+    "IDF Cosine": "0.0778",
+    "Shared Distinct Words": "2",
+    "Shared Words": "ahlāyīh, axwān",
+    "Dd Paragraph Preview": "0.5a: amāh hamist kē yazdān bandag ud pad kōxšišn ī Druz ham-spāh pad āstawānīh ī abar weh-Dēn ī Mazdēsnān ham-estišn pad ēk ān ī ahlāyīh rāh ham-tuxšišn ō gāh ī andar ān ī pāšom axwān ham-ārzōg pad ayābišn ī ō ān pāšom axwān Fraškerd ham-ēmēd hēm ān-imān kām ī ham-wēnišnīh ud ham-p...",
+    "PY Paragraph Preview": "caby_ch64_st2: andar axwān pad paydāgīh āškārag frāz pad ahlāyīh franāmēnd"
+  },
+  {
+    "PY Sentence Range": "s488",
+    "Candidate Rank": "3",
+    "Match Tier": "medium",
+    "Match Score": "0.1322",
+    "IDF Cosine": "0.093",
+    "Shared Distinct Words": "4",
+    "Shared Words": "abar, ahlāyīh, amāh, axwān",
+    "Dd Paragraph Preview": "0.5a: amāh hamist kē yazdān bandag ud pad kōxšišn ī Druz ham-spāh pad āstawānīh ī abar weh-Dēn ī Mazdēsnān ham-estišn pad ēk ān ī ahlāyīh rāh ham-tuxšišn ō gāh ī andar ān ī pāšom axwān ham-ārzōg pad ayābišn ī ō ān pāšom axwān Fraškerd ham-ēmēd hēm ān-imān kām ī ham-wēnišnīh ud ham-p...",
+    "PY Paragraph Preview": "caby_ch7_st28: ān ō ōy ohrmazd xwēš mizd ān ō amāh dahē pad ēn axwān pad =iz mēnōyān kū ēdōn pad ān ēdōn abar rasām ō ēd tō sālārīh ud ahlāyīh =iz hamētāōwisp"
+  },
+  {
+    "PY Sentence Range": "s2004-s2006",
+    "Candidate Rank": "4",
+    "Match Tier": "medium",
+    "Match Score": "0.1257",
+    "IDF Cosine": "0.0787",
+    "Shared Distinct Words": "4",
+    "Shared Words": "abar, ahlāyīh, amāh, axwān",
+    "Dd Paragraph Preview": "0.5a: amāh hamist kē yazdān bandag ud pad kōxšišn ī Druz ham-spāh pad āstawānīh ī abar weh-Dēn ī Mazdēsnān ham-estišn pad ēk ān ī ahlāyīh rāh ham-tuxšišn ō gāh ī andar ān ī pāšom axwān ham-ārzōg pad ayābišn ī ō ān pāšom axwān Fraškerd ham-ēmēd hēm ān-imān kām ī ham-wēnišnīh ud ham-p...",
+    "PY Paragraph Preview": "caby_ch41_st6: yān ī zardušt yān ī zardušt ān ī ōy ān ō amāh dahē pad =iz ēn axwān pad =iz mēnōyān kū ēdōn pad ān ēdōn abar rasēm ō ēd ī tō sālārīh ud ahlāyīh =iz hamētāōwisp"
+  },
+  {
+    "PY Sentence Range": "s2751-s2755",
+    "Candidate Rank": "5",
+    "Match Tier": "strong",
+    "Match Score": "0.1244",
+    "IDF Cosine": "0.0992",
+    "Shared Distinct Words": "6",
+    "Shared Words": "abar, ahlāyīh, axwān, gāh, rāh, ēk",
+    "Dd Paragraph Preview": "0.5a: amāh hamist kē yazdān bandag ud pad kōxšišn ī Druz ham-spāh pad āstawānīh ī abar weh-Dēn ī Mazdēsnān ham-estišn pad ēk ān ī ahlāyīh rāh ham-tuxšišn ō gāh ī andar ān ī pāšom axwān ham-ārzōg pad ayābišn ī ō ān pāšom axwān Fraškerd ham-ēmēd hēm ān-imān kām ī ham-wēnišnīh ud ham-p...",
+    "PY Paragraph Preview": "caby_ch53_st5: ān ī saxwanān [wāzišn] pad kanīgān gōwišn kū dēnrawāgīh pad hudōs ān =iz ī ašmāh āgāhīh ān =tān andar daman dānāgīh ī =tān andar tan ā =iz pad rāh ī ōy menišn =iz ō ān harw dō menišn dahišnīh ka tis ī mēnōy ud gētī dānēd ā =iz pad rāh ī ōy āgāhdahišnīh pad dēn pad harw dō axwā..."
+  }
+]

@@ -1,11 +1,9 @@
-// Configuration
-const SHEET_ID = '12RfhLBWxO8mJAcnY1OvsRNktxzETsJvFHE2zXFDO8as';
-const SHEET_GID = '1';  // Sheet numbers start at 1 (first sheet)
-const jsonUrl = `https://opensheet.elk.sh/${SHEET_ID}/${SHEET_GID}`;
+// Configuration - fetch from local JSON instead of Google Sheets
+const jsonUrl = './data.json';
 
 console.log('Fetching from:', jsonUrl);
 
-// Fetch data from Google Sheets using opensheet API
+// Fetch data from local JSON file
 fetch(jsonUrl)
   .then(response => {
     console.log('Response status:', response.status);
@@ -21,7 +19,7 @@ fetch(jsonUrl)
     const gallery = document.getElementById('gallery');
     
     if (!data || data.length === 0) {
-      gallery.innerHTML = '<p>No data found in sheet</p>';
+      gallery.innerHTML = '<p>No data found</p>';
       return;
     }
     
